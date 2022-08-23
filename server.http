@@ -1,0 +1,124 @@
+@host = http://localhost:3001
+
+
+#####
+
+# @name registerUser
+POST  {{host}}/auth/register
+Content-Type: application/json
+
+{
+	"firstName": "Mattie",
+	"lastName":"Canete",
+	"username":"Mattie",
+	"password": "Mattie",
+	"email":"Mattie@gmail.com"
+}
+
+####
+
+# @name postLogin
+POST {{host}}/auth/token
+Content-Type: application/json
+
+{
+  "username":"Mattie",
+  "password":"Mattie"
+}
+
+####
+
+GET {{host}}/users/
+Content-Type: application/json
+
+{
+  "username":"Mattie",
+  "password":"Mattie",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik1hdHRpZSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NjAxODQ3MTN9.qdW0hjzhsgHy7R1YY4NKIVW5ZduTkSKFfg84wYBuirE"
+}
+####
+
+GET {{host}}/users/Mattie
+Content-Type: application/json
+
+{
+  "username":"Mattie",
+  "password":"Mattie",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik1hdHRpZSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NjAxODQ3MTN9.qdW0hjzhsgHy7R1YY4NKIVW5ZduTkSKFfg84wYBuirE"
+}
+
+####
+
+POST {{host}}/users/
+Content-Type: application/json
+
+{
+ 
+ 
+ }
+
+####
+
+PATCH {{host}}/users/Mattie
+Content-Type: application/json
+
+{
+  
+  }
+
+####
+
+DELETE {{host}}/users/Mattie
+Content-Type: application/json
+
+{
+  
+  }
+
+
+####
+
+POST {{host}}/companies/
+Content-Type: application/json
+
+{
+  
+  }
+
+####
+
+GET {{host}}/companies/
+Content-Type: application/json
+
+{
+  
+  }
+
+####
+
+GET {{host}}/companies/:handle
+Content-Type: application/json
+
+{
+  
+  }
+
+ ####
+
+PATCH {{host}}/companies/:handle
+Content-Type: application/json
+
+{
+  
+  }
+ 
+####
+
+DELETE {{host}}/companies/:handle
+Content-Type: application/json
+
+{
+  
+  }
+
+  
